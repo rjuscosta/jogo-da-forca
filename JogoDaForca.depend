@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1595369372 source:c:\users\ronal\onedrive\documentos\aprendendo c++\jogodaforca\main.cpp
+	<iostream>
+	<stdlib.h>
+
