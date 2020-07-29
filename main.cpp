@@ -1,11 +1,12 @@
 #include <iostream>
 #include <stdlib.h>
+#include <string.h>
 
 using namespace std;
 
 int main()
 {
-    char palavraSecreta[30], letra[1], palavra[30];
+    char palavraSecreta[30], letra, palavra[30];
     int i = 0, tam = 0, chances = 6, acertos = 0;
     bool acerto = false;
 
@@ -17,14 +18,9 @@ int main()
 
     system("cls");
 
-    while(palavra[i] != '\0'){
-        i++;
-        tam++;
-    }
+    tam = strlen(palavra);
 
-    for(i=0; i < 30; i++){
-        palavraSecreta[i] = '-';
-    }
+    memset(palavraSecreta, '-', 30);
 
     while((chances > 0)&&(acertos < tam)){
         cout << "Chances restantes: " << chances << "\n\n";
@@ -34,10 +30,10 @@ int main()
         }
 
         cout << "\n\n Digite uma letra:";
-        cin >> letra[0];
+        cin >> letra;
 
         for(i=0; i<tam; i++){
-            if(palavra[i] == letra[0]){
+            if(palavra[i] == letra){
                 acerto = true;
                 palavraSecreta[i] = palavra[i];
                 acertos++;
